@@ -1,0 +1,19 @@
+<html>
+<head>
+        <title>Page Refreshes</title>
+</head>
+<body>
+    <?php
+        session_start();
+        if(isset($_SESSION["val"]))
+        {
+            $_SESSION["val"]++;
+        } 
+        else 
+        {
+            $_SESSION["val"]=0;
+        }
+        echo "<h1 align="."center".">Number of Page Refreshes are : ".$_SESSION["val"]."</h1>";
+    ?>
+</body>
+</html>
